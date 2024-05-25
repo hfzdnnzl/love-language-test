@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
@@ -7,6 +7,10 @@ import './App.css';
 
 
 const App = () => {
+  useEffect(() => {
+    document.title = "Love Language Test";
+  }, []);
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
