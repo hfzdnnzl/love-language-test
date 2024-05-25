@@ -10,30 +10,44 @@
 /* ChartLayout.css */
 .chart-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 500px));
     gap: 20px;
 }
 
 .donut-chart,
 .bar-chart {
-    flex: 1;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 20px;
-    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-@media (max-width: 768px) {
+
+.donut-chart {
+    grid-column: 1;
+}
+
+.bar-chart {
+    grid-column: 2;
+}
+
+@media (max-width: 800px) {
     .chart-grid {
         grid-template-columns: 1fr;
+        width: inherit;
+    }
+
+    .donut-chart,
+    .bar-chart {
+        grid-column: 1;
+        width: inherit;
+        height: inherit;
     }
 }
 
-
-/* CSS */
+/* Button Styling */
 .button-64 {
     margin: 10px;
     width: 50%;

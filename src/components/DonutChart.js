@@ -9,7 +9,7 @@ const DonutChart = ({data}) => {
     const labels = Object.keys(data);
     const values = Object.values(data);
     const total = values.reduce((a, b) => a + b, 0);
-    const percentages = values.map(value => (value/total) * 100);
+    const percentages = values.map(value => Math.round((value/total) * 10000)/100);
 
     const chartData = {
         labels: labels,
@@ -28,7 +28,18 @@ const DonutChart = ({data}) => {
         ]
     };
 
-    return <Doughnut data={chartData} />;
+    const options = {
+        plugins: {
+            title: {
+                display: false,
+            },
+            datalabels: {
+                display: false, // Disable data labels
+            },
+        },
+    };
+
+    return <Doughnut data={chartData} options={options}/>;
 };
 
 export default DonutChart;

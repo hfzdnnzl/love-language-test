@@ -5,7 +5,9 @@ import HorizontalBarChart from './HorizontalBarChart';
 const Result = ({ result }) => {
   return (
     <div className='result-container'>
-      <h2>Your Love Language Distribution</h2>
+      <h2>Your Love Language is <br/>
+      <span style={{ color: '#FF6384' }}>{Object.keys(result)[0]}
+      </span></h2>
 
       <div className='chart-grid'>
         <div className='donut-chart'><DonutChart  data={result} /></div>
