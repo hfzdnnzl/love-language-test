@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/love-language-test/static/css/main.18e6a0af.css",
-    "main.js": "/love-language-test/static/js/main.f3e1ab88.js",
+    "main.css": "/love-language-test/static/css/main.fa558a7a.css",
+    "main.js": "/love-language-test/static/js/main.32f82040.js",
     "static/js/453.5caeb27c.chunk.js": "/love-language-test/static/js/453.5caeb27c.chunk.js",
     "index.html": "/love-language-test/index.html",
-    "main.18e6a0af.css.map": "/love-language-test/static/css/main.18e6a0af.css.map",
-    "main.f3e1ab88.js.map": "/love-language-test/static/js/main.f3e1ab88.js.map",
+    "main.fa558a7a.css.map": "/love-language-test/static/css/main.fa558a7a.css.map",
+    "main.32f82040.js.map": "/love-language-test/static/js/main.32f82040.js.map",
     "453.5caeb27c.chunk.js.map": "/love-language-test/static/js/453.5caeb27c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18e6a0af.css",
-    "static/js/main.f3e1ab88.js"
+    "static/css/main.fa558a7a.css",
+    "static/js/main.32f82040.js"
   ]
 }
