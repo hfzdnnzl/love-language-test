@@ -1,6 +1,7 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import loveColors from './LoveColors';
 
 // Register the required components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -17,11 +18,11 @@ const DonutChart = ({data}) => {
             {
                 data: percentages,
                 backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
-                    '#9966FF'
+                    loveColors[Object.keys(data)[0]],
+                    loveColors[Object.keys(data)[1]],
+                    loveColors[Object.keys(data)[2]],
+                    loveColors[Object.keys(data)[3]],
+                    loveColors[Object.keys(data)[4]]
                   ],
                   borderColor: '#111',
             }

@@ -3,6 +3,7 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import loveColors from './LoveColors';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartDataLabels);
 
@@ -18,11 +19,11 @@ const HorizontalBarChart = ({data}) => {
             label: '',
             data: percentages,
             backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#4BC0C0',
-                '#9966FF'
+              loveColors[Object.keys(data)[0]],
+              loveColors[Object.keys(data)[1]],
+              loveColors[Object.keys(data)[2]],
+              loveColors[Object.keys(data)[3]],
+              loveColors[Object.keys(data)[4]]
               ],
             borderColor: '#111',
             borderWidth: 2,
@@ -67,7 +68,7 @@ const HorizontalBarChart = ({data}) => {
         
         layout: {
           padding: {
-              right: 20, // Add padding to the right to ensure labels fit within the chart area
+              right: 30, // Add padding to the right to ensure labels fit within the chart area
           },
       },
     };
