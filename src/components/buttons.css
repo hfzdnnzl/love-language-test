@@ -1,0 +1,122 @@
+/* Button Styling */
+.button-64 {
+    margin: 10px;
+    width: 50%;
+    max-width: 500px;
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    /* box-sizing: border-box; */
+    color: #111;
+    cursor: pointer;
+    /* display: flex; */
+    font-size: 16px;
+    height: 128px;
+    /* justify-content: center; */
+    line-height: 24px;
+    padding: 0 25px;
+    position: relative;
+    /* text-align: center; */
+    /* text-decoration: none; */
+    /* user-select: none; */
+    /* -webkit-user-select: none; */
+    /* touch-action: manipulation; */
+}
+
+.button-64:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    /* display: block; */
+    height: 128px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-64:active {
+    background-color: #fcbeb7;
+    /* outline: 0; */
+}
+
+@media (min-width: 700px) {
+    .button-64 {
+        padding: 0 40px;
+    }
+}
+
+@media (hover: hover) {
+    .button-64:hover:after {
+        transform: translate(0, 0);
+    }
+
+    /* .button-64:hover {
+        outline: 0;
+    } */
+}
+
+/* Adjustments for iPhone screens */
+@media only screen and (max-width: 600px) {
+    .button-64 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.button-64.active {
+    background-color: #fcbeb7;
+}
+
+.button-small {
+    margin: 20px;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    color: #111;
+    cursor: pointer;
+    font-size: 16px;
+    height: 48px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.button-small:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(6px, 6px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-small:active {
+    background-color: #fcbeb7;
+}
+
+@media (hover: hover) {
+    .button-small:hover:after {
+        transform: translate(0, 0);
+    }
+}
+
+.button-small:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #a0a0a0;
+    color: #a0a0a0;
+    cursor: default;
+}
+
+.button-small:disabled:after {
+    background-color: #a0a0a0;
+    transform: translate(6px, 6px);
+}

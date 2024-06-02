@@ -17,3 +17,22 @@ header {
   padding: 20px 0;
   border-radius: 8px;
 }
+
+/* Answers and result container */
+.answers-container,
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjustments for iPhone screens */
+@media only screen and (max-width: 600px) {
+  h3 {
+    margin: 15% 0;
+  }
+  .answers-container {
+    margin: 10% 0;
+  }
+
+}

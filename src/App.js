@@ -12,8 +12,11 @@ const App = () => {
   const [showResult, setShowResult] = useState(false);
 
   const handleAnswer = (answer, index) => {
-    setAnswers([...answers.slice(0, index), answer]);
+    if(answer !== null) {
+      setAnswers([...answers.slice(0, index), answer, ...answers.slice(index+1)]);
+    }
     setCurrentQuestion(index + 1);
+
     if (index === questions.length - 1) {
       setShowResult(true);
     } else {
@@ -36,6 +39,12 @@ const App = () => {
     return sortedCount;
   };
 
+  const resetQuiz = () => {
+    setCurrentQuestion(0);
+    setAnswers([]);
+    setShowResult(false);
+  };
+
   return (
     <div className="App">
       <Header />
@@ -45,8 +54,15 @@ const App = () => {
         onAnswer={handleAnswer}
         currentIndex={currentQuestion}
         totalQuestions={questions.length}
+        totalAnswered={answers.length}
+        answers={answers}
         />
-        ) : (<Result result={calculateResult()} />)
+        ) : (
+        <Result 
+        result={calculateResult()} 
+        resetQuiz={resetQuiz}
+        />
+      )
       }
     </div>
   );

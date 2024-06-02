@@ -1,0 +1,38 @@
+/* ChartLayout.css */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 500px));
+    gap: 20px;
+}
+
+.donut-chart,
+.bar-chart {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.donut-chart {
+    grid-column: 1;
+}
+
+.bar-chart {
+    grid-column: 2;
+}
+
+@media (max-width: 800px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+        width: inherit;
+    }
+
+    .donut-chart,
+    .bar-chart {
+        grid-column: 1;
+        width: inherit;
+        height: inherit;
+    }
+}
